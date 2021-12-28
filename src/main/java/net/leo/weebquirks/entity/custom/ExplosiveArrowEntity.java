@@ -1,9 +1,8 @@
 package net.leo.weebquirks.entity.custom;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -11,7 +10,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
 public class ExplosiveArrowEntity extends ArrowEntity {
-
+    private boolean exploded = false;
 
     public ExplosiveArrowEntity(World worldIn, LivingEntity shooter) {
         super(worldIn, shooter);
@@ -24,13 +23,16 @@ public class ExplosiveArrowEntity extends ArrowEntity {
 
     @Override
     protected void onImpact(RayTraceResult result) {
-        World world = this.world;
-        BlockPos pos = this.getPosition();
+        if (!exploded) {
+            World world = this.world;
+            BlockPos pos = this.getPosition();
+            BlockState enlitedTNT = Blocks.TNT.getDefaultState();
+            enlitedTNT.catchFire(world, pos, null, null);
 
-        world.setBlockState(pos, Blocks.TNT.getDefaultState());
-        world.setBlockState(pos.up(), Blocks.REDSTONE_TORCH.getDefaultState());
+            world.setBlockState(pos, enlitedTNT);
 
-
-        super.onImpact(result);
+            super.onImpact(result);
+            exploded =  true;
+        }
     }
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "weebquirks:upgrader"
+    }
+  ],
+  "result": {
+    "item": "weebquirks:explosive_arrow",
+    "count": 3
+  }
+}
