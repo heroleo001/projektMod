@@ -1,4 +1,4 @@
-package net.leo.weebquirks.item.overriding;
+package net.leo.weebquirks.item.custom;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

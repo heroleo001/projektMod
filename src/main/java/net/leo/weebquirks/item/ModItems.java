@@ -1,10 +1,7 @@
 package net.leo.weebquirks.item;
 
 import net.leo.weebquirks.WeebQuirks;
-import net.leo.weebquirks.item.overriding.DrillItem;
-import net.leo.weebquirks.item.overriding.HammerItem;
-import net.leo.weebquirks.item.overriding.OnePunch;
-import net.leo.weebquirks.item.overriding.Upgrader;
+import net.leo.weebquirks.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -37,6 +34,10 @@ public class ModItems {
     public static final RegistryObject<Item> ONE_PUNCH_SWORD = ITEMS.register("one_punch_sword",
             () -> new OnePunch(ModItemTier.ONEPUNCH, 5, 10f,
                     new Item.Properties().group(ModItemGroup.WEEBQUIRKS_GROUP)));
+
+    public static final RegistryObject<Item> EXPLOSIVE_ARROW = ITEMS.register("explosive_arrow",
+            () -> new ExplosiveArrowItem(new Item.Properties().group(ModItemGroup.WEEBQUIRKS_GROUP)));
+
 
 
 
