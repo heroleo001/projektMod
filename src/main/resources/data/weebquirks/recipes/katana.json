@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #i",
+    "ri ",
+    "Sr "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "r": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "#": {
+      "item": "weebquirks:upgrader"
+    }
+  },
+  "result": {
+    "item": "weebquirks:technium_catan"
+  }
+}

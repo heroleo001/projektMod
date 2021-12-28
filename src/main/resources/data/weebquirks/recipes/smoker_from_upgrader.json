@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " F ",
+    " L "
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "#": {
+      "item": "weebquirks:upgrader"
+    }
+  },
+  "result": {
+    "item": "minecraft:smoker"
+  }
+}

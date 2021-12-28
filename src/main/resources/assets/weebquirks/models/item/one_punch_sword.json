@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "weebquirks:item/one_punch_sword"
+  }
+}

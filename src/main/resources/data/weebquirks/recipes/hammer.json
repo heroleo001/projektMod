@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#ir",
+    " Si",
+    "S  "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "r": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "#": {
+      "item": "weebquirks:upgrader"
+    }
+  },
+  "result": {
+    "item": "weebquirks:technium_hammer"
+  }
+}
